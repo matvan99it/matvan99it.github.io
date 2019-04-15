@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prova movimento bidimensionale</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="jquery.js"></script>
+</head>
+<body>
+	<header><a href="../../index.html">Home</a></header>
+<p id="testum">
+	Per muoversi basta premere WASD o le frece direzionali
+	<br>
+	Premi Spazio per tornare alla muroizione di base
+</p>
+<p>Comandi: <div id="comandi"></div></p>
+
+
+<div id="test" class="block"> </div>
+<p>
+
+	<div>
+		<strong>Note personali:</strong>
+		<ul>
+			<li>capire come <del>bloccare</del> <del>far muovere</del> fare qualsisai cosa con test al contatto con i comandi</li>
+			
+			<li>Trovare il modo di generare 2 o più div per testare le collisioni con oggetti creati dinamicamente</li>
+		</ul>
+	</div>
+
+	<div>
+		<strong>Array sintetizzati</strong>
+		<ul>
+			<li>[0] -> larghezza
+				<ul>
+					<li>[0][0] -> x</li>
+					<li>[0][1] -> x + larghezza</li>
+				</ul>
+			</li>
+			<li>[1] -> altezza
+				<ul>
+					<li>[1][0] -> y</li>
+					<li>[1][1] -> y + altezza</li>
+				</ul>
+			</li> 
+		</ul>
+</p>
+
+</div>
+	<br><br>
+		<table id="muro">
+			<tr>
+				<td id="suSx">S L</td>
+				<td id="su"><img src="up.jpg"/></td></td>
+				<td id="suDx">S R</td>
+			</tr>
+			<tr>
+				<td id="sinistra"><img src="left.jpg"/></td>
+				<td id="centro"> • </td>
+				<td id="destra"><img src="right.jpg"/></td>
+			</tr>
+			<tr>
+				<td id="giuSx">G L</td>
+				<td id="giu"><img src="down.jpg"/></td>
+				<td id="giuDx">G R</td>
+			</tr>
+	<table>
+
+
+<div id="testoh">banana</div>
+</body>
+</html>

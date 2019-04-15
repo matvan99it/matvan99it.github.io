@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.divario
+{
+	border: 5px solid red;
+	margin: 20px 20px 20px 20px;
+	text-align: center;
+}
+
+div#panel
+{
+	width: 170px;
+	height: 170px;
+	background-color: aqua
+}
+#movable 
+{
+	position:absolute;
+	border:#D8F9D3 5px solid;
+	background:#F9F9F9;
+	height:200px;
+	width:200px;
+	line-height:150px;
+	border-radius:4px;
+	z-index: -1;
+}
+.arrow{margin:1px;width: 20px;height: 20px;}
+
+#test{
+    position : absolute;
+    width : 20px;
+    height : 20px;
+    background-color : blue;
+}
+html
+{
+	height: 100%;
+}
+body
+{
+	height: 100%;
+}
+tr td
+{
+	border: 1px solid black;
+	text-align: center;
+}
+
+table#muro{
+	border: 1px solid black;
+	background-color: yellow;
+}
+
+td
+{
+	padding: 20px 20px 20px 20px;
+}
+
+
+
+.container{ color:#fff; /*float:left; width: 100% ); height:100%; background:#222;*/ }
+
+
+
+
+.bomb {
+  position:absolute;
+  background-color:red;
+  left:250px;
+  width:40px;
+  height:40px;
+  margin:5px;
+}
+
+
+.causale{
+    position: absolute;
+    background-color: lightblue;
+    opacity: .5;
+    width: 100px;
+    height: 100px;
+    box-shadow: 3px 3px 5px gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
