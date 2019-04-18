@@ -5,6 +5,34 @@
     position : absolute;
     width : 20px;
     height : 20px;
-    background-color : blue;
+    background-color : orange;
 }
 
+body
+{
+	border: 1px solid black;
+	height: 600px;
+}
+
+hr
+{
+	border: none;
+    height: 400px;
+    /* Set the hr color */
+    background-color: green; /* fallback */
+  background-image: -webkit-linear-gradient(top, lightblue 50%, green 50.001%);
+  background-image:    -moz-linear-gradient(top, lightblue 50%, green 50.001%);
+  background-image:      -o-linear-gradient(top, lightblue 50%, green 50.001%);
+  background-image:         linear-gradient(to bottom, lightblue 50%, green 50.001%);
+  z-index: -1;
+    
+}
+
+#animdiv {
+    position: absolute;
+    left: -600px;
+    top: 32px;
+    width: 100px;
+    height: 20px;
+    border: 1px solid blue;
+}
