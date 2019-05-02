@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp" >
+
+<div ng-controller="myCtrl">
+
+<select ng-model="selectedName" ng-options="x for x in names">
+</select>
+
+<hr>
+
+<select>
+  <option ng-repeat="x in names">{{x}}</option>
+</select>
+<p>This example shows how to fill a dropdown list using the ng-options directive.</p>
+
+<hr>
+
+<select ng-model="selectedCar">
+  <option ng-repeat="x in cars" value="{{x.model}}">{{x.model}}</option>
+</select>
+
+
+<h1>You selected: {{selectedCar}}</h1>
+<hr>
+
+<select ng-model="selectedCar1" ng-options="x.model for x in cars">
+</select>
+<h1>You selected: {{selectedCar1.model}}</h1>
+<p style="background-color: {{selectedCar1.color}}">Its color is: {{selectedCar.color}}</p>
+
+<hr>
+
+<p>Select a car:</p>
+
+<select ng-model="selectedCar2" ng-options="x for (x, y) in cars1">
+</select>
+
+<h1>You selected: {{selectedCar2}}</h1>
+
+<hr>
+
+<p>Select a car:</p>
+
+<select ng-model="selectedCar3" ng-options="x for (x, y) in cars2">
+</select>
+
+<h1>You selected: {{selectedCar3.brand}}</h1>
+<h2>Model: {{selectedCar3.model}}</h2>
+<h3 style="background-color: {{selectedCar3.color}}">Color: {{selectedCar3.color}}</h3>
+
+<p>Note that the selected value represents an object.</p>
+
+
+</div>
+
+
+
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.names = ["Emil", "Tobias", "Linus"];
+
+$scope.cars = [
+  {model : "Ford Mustang", color : "red"},
+  {model : "Fiat 500", color : "white"},
+  {model : "Volvo XC90", color : "black"}
+];
+
+$scope.cars1 = {
+        car01 : "Ford",
+        car02 : "Fiat",
+        car03 : "Volvo"
+    }
+
+$scope.cars2 = {
+        car01 : {brand : "Ford", model : "Mustang", color : "red"},
+        car02 : {brand : "Fiat", model : "500", color : "white"},
+        car03 : {brand : "Volvo", model : "XC90", color : "black"}
+    }
+
+
+
+});
+
+
+</script>
+
+
+
+<a href="angular_9.html">Eventi</a>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

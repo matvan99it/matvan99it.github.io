@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp" >
+
+
+<div ng-controller="myCtrl">
+
+<ul>
+	Tipi di filtri
+  <li ng-repeat="x in namese">{{x}}</li>
+</ul>
+
+</div>
+
+<div ng-controller="namesCtrl">
+
+<p>Looping with objects:</p>
+<ul>
+  <li ng-repeat="x in names | orderBy:'country'">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul>
+
+</div>
+
+
+
+<hr>
+
+
+
+provare a filtrare in base a ciò che è stato scritto
+
+<div ng-controller="Ctrl">
+<input type="text" ng-model="lettera">
+<ul>
+	ng-repeat filtrato per la lettera {{ lettera }}
+  <li ng-repeat="x in names | filter : lettera">
+    {{ x }}
+  </li>
+</ul>
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope) {
+    $scope.namese = ["currency -> Format a number to a currency format.",
+"date -> Format a date to a specified format.",
+"filter -> Select a subset of items from an array.",
+"json -> Format an object to a JSON string.",
+"limitTo -> Limits an array/string, into a specified number of elements/characters.",
+"lowercase -> Format a string to lower case.",
+"number -> Format a number to a string.",
+"orderBy -> Orders an array by an expression.",
+"uppercase -> Format a string to upper case."];
+});
+
+app.controller('namesCtrl', function($scope) {
+    $scope.names = [
+        {name:'Jani',country:'Norway'},
+        {name:'Carl',country:'Sweden'},
+        {name:'Margareth',country:'England'},
+        {name:'Hege',country:'Norway'},
+        {name:'Joe',country:'Denmark'},
+        {name:'Gustav',country:'Sweden'},
+        {name:'Birgit',country:'Denmark'},
+        {name:'Mary',country:'England'},
+        {name:'Kai',country:'Norway'}
+        ];
+});
+
+app.controller('Ctrl', function($scope) {
+    $scope.names = [
+        'Jani',
+        'Carl',
+        'Margareth',
+        'Hege',
+        'Joe',
+        'Gustav',
+        'Birgit',
+        'Mary',
+        'Kai'
+    ];
+});
+
+
+</script>
+
+
+
+
+
+
+<a href="angular_6.html">Services</a>
+</body>
+</html>

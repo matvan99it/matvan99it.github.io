@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="">
+<!-- ng-model <- collega il value dei vari elementi HTML all'applicativo -->
+
+<form name="myForm">
+    Email:
+    <input type="email" name="Address" ng-model="text">
+    <span ng-show="myForm.Address.$error.email">Not a valid e-mail address</span>
+</form>
+
+<p>Enter your e-mail address in the input field. AngularJS will display an errormessage if the address is not an e-mail.</p>
+
+
+<form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
+
+Email:
+<input type="email" name="myAddress" ng-model="myText" required>
+<p>Edit the e-mail address, and try to change the status.</p>
+<h1>Status</h1>
+<p>Valid: {{myForm.myAddress.$valid}} (if true, the value meets all criteria).</p>
+<p>Dirty: {{myForm.myAddress.$dirty}} (if true, the value has been changed).</p>
+<p>Touched: {{myForm.myAddress.$touched}} (if true, the field has been in focus).</p>
+
+</form>
+<br>
+Cambio colore per il nome
+<style>
+input.ng-invalid {
+  background-color: lightblue;
+}
+
+input.ng-valid {
+  background-color: lightgreen;
+}
+</style>
+<body>
+
+<form name="Form">
+  Enter your name:
+  <input name="Name" ng-model="Text" required>
+</form>
+
+<a href="angular_4.html">scope</a>
+
+</body>
+</html>

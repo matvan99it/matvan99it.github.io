@@ -59,17 +59,18 @@ $(document).ready(function(){
 
 	 function jump(i)
 	{
-		if (i > 15){
-			return gravita(0);
+		if (i > 8){
+			return gravita(0, "singolo");
 		}
 
 		y-=1
 
 	  	var interv = setTimeout(function() {
 	    jump(i+1);
-	    if(i>2 && (keyState[38] || keyState[32]))
-	    {
-	    	double_jump(i);
+	    var j=i+3;
+	    if(i>5 && (keyState[38] || keyState[32]))
+	    {	    	
+	    	double_jump(i, j);
 	    }
 	  }, 100);
 	}
@@ -82,16 +83,17 @@ $(document).ready(function(){
 
 Capire come attivare l'animazione di doppio salto 
 senza che vada il loop a mezz'aria
-
+e fare in modo che non si attivi il salto singolo a mezz'aria ma si attivi il doppio salto
 **
 
 */
 
 
-function double_jump(i)
+function double_jump(i, j)
 {
-	if (i > 10){
-		return gravita(0);
+	console.log(j);
+	if (i > j){
+		return gravita(0, "doppio");
 	}
 
 	y-=1
@@ -101,19 +103,38 @@ function double_jump(i)
   }, 100);
 }
 
-function gravita(i)
+function gravita(i, salto)
 {
-	if (i > 15)
+	if(salto=="singolo")
 	{
-		return i;
-		
+		if (i > 8)
+		{
+			return i;
+			
+		}
+
+		y+=1
+
+	  	var interv = setTimeout(function() {
+	    	gravita(i+1, "singolo");
+	  	}, 100);
 	}
 
-	y+=1
+	if(salto=="doppio")
+	{
+		if (i > 10)
+		{
+			return i;
+			
+		}
 
-  var interv = setTimeout(function() {
-    gravita(i+1);
-  }, 100);
+		y+=1
+
+	  	var interv = setTimeout(function() {
+	    	gravita(i+1, "doppio");
+	  	}, 100);
+	}
+	
 }
 
 //movimento del personaggio

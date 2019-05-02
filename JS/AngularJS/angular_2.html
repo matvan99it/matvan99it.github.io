@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl" ng-init="quantity=1;price=5">
+{{ firstName + " " + lastName }}
+<p w3-test-directive></p>
+
+
+Quantity: <input type="number" ng-model="quantity">
+Costs:    <input type="number" ng-model="price">
+
+Total in dollar: {{ quantity * price }}
+
+
+<div ng-app="" ng-init="names=['Jani','Hege','Kai']">
+  <ul>
+  	elementi di un array agiunti con un loop
+    <li ng-repeat="x in names"><!-- <- questo comando funge da foreach dato che gli si dice di creare un nuovo elemento per ogni elemento dell'array e {{x}} è il numero dell'elelemento Es.: foreach(x in names){ echo("<li>" . x . "</li>"); } -->
+      {{ x }}
+    </li>
+  </ul>
+</div>
+
+
+<div ng-app="" ng-init="name=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
+
+<ul>
+	utilizzo di matrici
+  <li ng-repeat="x in name">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul>
+
+</div>
+
+
+<gianni></gianni>
+
+
+<a href="angular_3.html">ng-model</a>
+
+<script>
+var app = angular.module("myApp", []);//creazione di un modulo
+
+app.controller("myCtrl", function($scope)//aggiunta di un controller
+{
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+
+
+/*
+Le direttive sono attributi HTML estesi con prefisso "ng-"
+*/
+
+//aggiunta di una direttiva
+app.directive("w3TestDirective", function() {
+    return {
+        template : "<h1>Made by a directive!</h1>"
+    };
+});
+
+app.directive("gianni", function() {
+    return {
+        template : "<p>avvert come un PERICHOLHOH</p>"
+    };
+});
+
+
+/*Restrizioni
+
+E for Element name
+A for Attribute
+C for Class
+M for Comment
+
+*/
+
+
+
+</script>
+
+</body>
+</html>

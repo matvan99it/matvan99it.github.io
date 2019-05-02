@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp" >
+
+<div ng-controller="formCtrl">
+<form>
+  First Name: <input type="text" ng-model="firstname">
+
+<h1>You entered: {{firstname}}</h1>
+</form>
+</div>
+
+
+<hr/>
+
+
+
+<div ng-controller="Ctrl1">
+  <form>
+    Check to show a header:
+    <input type="checkbox" ng-model="Var">
+  </form>
+  <h1 ng-show="Var">My Header</h1>
+</div>
+
+
+
+
+<hr>
+
+
+
+
+<div ng-controller="Ctrl2">
+<form>
+  Pick a topic:
+  <input type="radio" ng-model="VaaV" value="dogs">Dogs
+  <input type="radio" ng-model="VaaV" value="tuts">Tutorials
+  <input type="radio" ng-model="Vaav" value="cars">Cars
+</form>
+
+<div ng-switch="VaaV">
+  <div ng-switch-when="dogs">
+     <h1>Dogs</h1>
+     <p>Welcome to a world of dogs.</p>
+  </div>
+  <div ng-switch-when="tuts">
+     <h1>Tutorials</h1>
+     <p>Learn from examples.</p>
+  </div>
+  <div ng-switch-when="cars">
+     <h1>Cars</h1>
+     <p>Read about cars.</p>
+  </div>
+</div>
+</div>
+
+
+<hr>
+
+
+<div ng-controller="Ctrl3">
+<form id="select">
+  Select a topic:
+  <select ng-model="mVaaV">
+    <option value="">
+    <option value="dogs">Dogs
+    <option value="tuts">Tutorials
+    <option value="cars">Cars
+  </select>
+</form>
+
+
+
+
+
+
+
+<div ng-switch="mVaaV">
+  <div ng-switch-when="dogs">
+     <h1>Dogs</h1>
+     <p>Welcome to a world of dogs.</p>
+  </div>
+  <div ng-switch-when="tuts">
+     <h1>Tutorials</h1>
+     <p>Learn from examples.</p>
+  </div>
+  <div ng-switch-when="cars">
+     <h1>Cars</h1>
+     <p>Read about cars.</p>
+  </div>
+</div>
+
+
+<hr>
+<h1>EXAMPLE</h1>
+
+<div  ng-controller="frmCtrl">
+  <form novalidate>
+    First Name:<br>
+    <input type="text" ng-model="user.firstName"><br>
+    Last Name:<br>
+    <input type="text" ng-model="user.lastName">
+    <br><br>
+    <button ng-click="reset()">RESET</button>
+  </form>
+  <p>form = {{user}}</p>
+  <p>master = {{master}}</p>
+</div>
+
+<hr>
+
+<h1>Form State and Input State</h1>
+
+<div ng-controller="Status">
+<p>Try leaving the first input field blank:</p>
+
+<form name="myForm">
+<p>Name:
+<input name="myName" ng-model="myName" required>
+<span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.</span>
+</p>
+
+<p>Address:
+<input name="myAddress" ng-model="myAddress" required>
+</p>
+
+</form>
+</div>
+
+<br><br>
+
+<h2>Validation Example</h2>
+
+<form ng-controller="validateCtrl" 
+name="myForm" novalidate>
+
+<p>Username:<br>
+<input type="text" name="user" ng-model="user" required>
+<span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+<span ng-show="myForm.user.$error.required">Username is required.</span>
+</span>
+</p>
+
+<p>Email:<br>
+<input type="email" name="email" ng-model="email" required>
+<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+<span ng-show="myForm.email.$error.required">Email is required.</span>
+<span ng-show="myForm.email.$error.email">Invalid email address.</span>
+</span>
+</p>
+
+<p>
+<input type="submit"
+ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
+myForm.email.$dirty && myForm.email.$invalid">
+</p>
+
+</form>
+
+<br><br>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+  $scope.firstname = "John";
+});
+app.controller('Ctrl1', function($scope) {
+
+});
+app.controller('Ctrl2', function($scope) {
+
+});
+app.controller('Ctrl3', function($scope) {
+
+});
+app.controller('frmCtrl', function($scope) {
+  $scope.master = {firstName: "John", lastName: "Doe"};
+  $scope.reset = function() {
+    $scope.user = angular.copy($scope.master);
+  };
+  $scope.reset();
+});
+app.controller('Status', function($scope) {
+
+});
+app.controller('validateCtrl', function($scope) {
+    $scope.user = 'John Doe';
+    $scope.email = 'john.doe@gmail.com';
+});
+</script>
+
+
+
+<a href="angular_11.html">Animazioni</a>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

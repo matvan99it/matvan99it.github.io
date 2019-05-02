@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<p>Try to change the names.</p>
+
+<div ng-app="myApp" ng-controller="myCtrl" >
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}} <!-- tipologia di espressione che viene risolta grazie a ng-app(senza verrebbe stampato così)-->
+
+<p>Change the value of the input field:</p>
+<input ng-init="myCol='purple';" style="background-color:{{myCol}}" ng-model="myCol">
+
+
+<p ng-init="quantity=1;cost=5;">Total in dollar ng-bind: <span ng-bind="quantity * cost"></span></p>
+<p ng-init="quantity=1;cost=5;">Total in dollar doppiagrafa: {{ quantity * cost }}</p>
+
+
+<p>person={firstName:'John',lastName:'Doe'} <- oggetto JS</p>
+<p ng-init="person={firstName:'John',lastName:'Doe'}">The name is {{ person.lastName }} <- richiesto person.lastName </p>
+
+<!-- utilizzo di array -->
+<p ng-init="points=[1,15,19,2,40]">The third result is {{ points[2] }}</p>
+
+
+</div>
+
+
+
+<a href="angular_2.html">Moduli angular</a>
+
+
+
+
+
+
+<script>
+/*
+Modules definedefinisce l'applicativo angular
+
+Controllers controlla l'applicativo angular
+
+ng-app definisce l'applicativo
+
+ng-controller definisce il controller
+
+*/
+
+
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "John";
+    $scope.lastName= "Doe";
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp" >
+
+<div ng-controller="funziona">
+  <ul>    
+    <li ng-repeat="x in eventi">{{ x }}</li>
+  </ul>
+</div>
+
+
+<div ng-controller="CtrlMove">
+
+<h1 ng-mousemove="count = count + 1">Mouse over me!</h1>
+
+<h2>{{ count }}</h2>
+
+</div>
+
+<div ng-controller="CtrlClick">
+
+<button ng-click="count1 = count1 + 1">Click me!</button>
+
+<p>{{ count1 }}</p>
+
+</div>
+
+<div ng-controller="CtrlToggle">
+
+<button ng-click="myFunc()">Click Me!</button>
+
+<div ng-show="showMe">
+  <h1>Menu:</h1>
+  <div>Pizza</div>
+  <div>Pasta</div>
+  <div>Pesce</div>
+</div>
+
+</div>
+
+
+<hr>
+
+<h1>Event object</h1>
+
+<div ng-controller="CtrlObject">
+
+<h1 ng-mousemove="myFunc($event)">Mouse Over Me!</h1>
+
+<p>Coordinates: {{x + ', ' + y}}</p>
+
+</div>
+
+
+
+
+
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('funziona', function($scope) {
+    $scope.eventi=[
+    "ng-blur",
+    "ng-change",
+    "ng-click",
+    "ng-copy",
+    "ng-cut",
+    "ng-dblclick",
+    "ng-focus",
+    "ng-keydown",
+    "ng-keypress",
+    "ng-keyup",
+    "ng-mousedown",
+    "ng-mouseenter",
+    "ng-mouseleave",
+    "ng-mousemove",
+    "ng-mouseover",
+    "ng-mouseup",
+    "ng-paste"
+    ];
+});
+
+
+
+app.controller('CtrlMove', function($scope) {
+  $scope.count = 0;
+});
+
+app.controller('CtrlClick', function($scope) {
+  $scope.count1 = 0;
+});
+
+app.controller('CtrlToggle', function($scope) {
+  $scope.showMe = false;
+  $scope.myFunc = function() {
+    $scope.showMe = !$scope.showMe;
+  }
+});
+
+app.controller('CtrlObject', function($scope) {
+  $scope.myFunc = function(myE) {
+    $scope.x = myE.clientX;
+    $scope.y = myE.clientY;
+  }
+});
+
+</script>
+
+
+
+<a href="angular_10.html">Form</a>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp" >
+
+
+<div ng-controller="myCtrl">
+
+<ul>
+  <li ng-repeat="x in names">{{x}}</li>
+</ul>
+
+</div>
+
+
+<p>The variable "x" has a different value for each repetition, proving that each repetition has its own scope.</p>
+
+<p>The rootScope's favorite color:</p>
+<h1>{{color}}</h1>
+
+<div ng-controller="Ctrl">
+  <p>The scope of the controller's favorite color:</p>
+  <h1>{{color}}</h1>
+</div>
+
+<p>The rootScope's favorite color is still:</p>
+<h1>{{color}}</h1>
+
+<p>Notice that controller's color variable does not overwrite the rootScope's color value.</p>
+
+<script>
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope) {
+    $scope.names = ["Emil", "Tobias", "Linus", "gianni"];
+
+});
+app.run(function($rootScope) {
+  $rootScope.color = 'blue';
+});
+app.controller('Ctrl', function($scope) {
+  $scope.color = "red";
+});
+</script>
+
+
+
+
+<a href="angular_5.html">Filtri</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+Controllo su mario-like
+Aggiunta file su prova sprite e prova combattimento
+
+Aggiunta cambio colore a movimento in movimento bidimensionale
+
+
+Viola	#990099
+ 	  #910891
+ 	  #8a0f8a
+ 	  #821782
+ 	  #7a1f7a
+ 	  #732673
+ 	  #6b2e6b
+ 	  #633663
+ 	  #5c3d5c
+ 	  #544554
+ 	  #4c4c4c
+ 	  #455445
+ 	  #3d5c3d
+ 	  #366336
+ 	  #2e6b2e
+ 	  #267326
+ 	  #1f7a1f
+ 	  #178217
+ 	  #0f8a0f
+ 	  #089108
+Verde 	#009900
+
+Aggiunta angular basilare
+
+per iniziare ionic
+https://www.tutorialspoint.com/ionic/ionic_environment_setup.htm

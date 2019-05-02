@@ -168,6 +168,45 @@ function colorizzazzione(str1, str2, str3, str4, str5, str6, str7, str8, str9, s
 		$(st8).css("background-color", "purple");
 		$(st9).css("background-color", "purple");
 	}
+
+	switch(str1)
+	{
+		case "centro":
+			$("#test").css("background-color", "blue");
+		break;
+
+		case "sinistra":
+	    	$("#test").css("background-color", "red");
+		break;
+
+		case "destra":
+	    	$("#test").css("background-color", "green");
+		break;
+
+		case "su":
+	    	$("#test").css("background-color", "yellow");
+		break;
+
+		case "giu":
+	    	$("#test").css("background-color", "orange");
+		break;
+
+		case "suDx":		
+	    	$("#test").css("background-color", "#80cc00");
+		break;
+
+		case "suSx":		
+	    	$("#test").css("background-color", "#ff8000");
+		break;
+
+		case "giuDx":
+	    	$("#test").css("background-color", "#99b233");
+		break;
+
+		case "giuSx":
+	    	$("#test").css("background-color", "#ff4c1a");
+		break;
+	}
 }
 
 //movimento del personaggio

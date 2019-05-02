@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prova movimento bidimensionale</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="jquery.js"></script>
+</head>
+<body><!--  -->
+	<div ng-app="" ng-init="firstName='gianni'"><!-- ng-app serve a dire che quell'elemento html può utilizzare angular -->
+	<!-- ng-init serve a inizializzare le variabili angular (Si può anche usare data-ng-init per rendere la pagina html valida) -->
+ 
+<p>Input something in the input box:</p>
+<p>Name: <input type="text" ng-model="name"></p><!-- ng-model collega direttamente il contenuto del campo di input alla variabile di applicazione con nome "name" -->
+<p ng-bind="name"></p><!-- ng-bind collega il contenuto del <p> all'input -->
+
+
+
+<p>The name is <span ng-bind="firstName"></span></p>
+
+
+<p>My first expression: {{ 5 + 5 }}</p><!-- quello dentro la doppia grafa viene tradotto -->
+
+<p>Name: <input type="text" ng-model="name"></p>
+ <p>{{name}}</p><!-- {{ name }} è visto come ng-bind="name"-->
+
+<a href="angular_1.html">prossimo tentativo di angular</a>
+
+</div>
+
+</body>
+</html>
