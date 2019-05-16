@@ -36,3 +36,8 @@ hr
     height: 20px;
     border: 1px solid blue;
 }
+
+.photo{
+  width: 50px;
+  height: 50px;
+}
