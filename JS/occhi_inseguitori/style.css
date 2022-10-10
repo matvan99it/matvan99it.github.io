@@ -1,0 +1,31 @@
+
+:root{
+    --angle: 0deg;
+}
+
+body{
+    background-color: #000;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+#eyes, #eyes img{
+    position: absolute;        
+}
+
+#anchor{
+    border: 5px green solid;
+}
+
+.eye{
+    rotate: 90 + var(--rotate)deg;
+    filter: hue-rotate(var(--rotate));
+}
