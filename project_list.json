@@ -1,0 +1,45 @@
+{
+    "origin": "./JS/",
+    "file": [
+        {
+            "Name": "AngularJS", 
+            "path": "AngularJS/"
+        },
+        {
+            "Name": "Animazioni scorrevoli", 
+            "path": "animazioni_scorrevoli/"
+        },
+        {
+            "Name": "Bottone fico", 
+            "path": "bottone_ballerino/"
+        },
+        {
+            "Name": "cerchio", 
+            "path": "cerchio/"
+        },
+        {
+            "Name": "Carro metal slug", 
+            "path": "coso_schiantoso/"
+        },
+        {
+            "Name": "Morty ti osserva", 
+            "path": "occhi_inseguitori"
+        },
+        {
+            "Name": "prova combattimento", 
+            "path": "prova combattimento/"
+        },
+        {
+            "Name": "prova mario-like", 
+            "path": "prova mario-like/"
+        },
+        {
+            "Name": "prova movimento bidimensionale", 
+            "path": "prova movimento bidimensionale/"
+        },
+        {
+            "Name": "Tesina", 
+            "path": "TESINA/"
+        }
+    ]
+}

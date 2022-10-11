@@ -8,3 +8,31 @@
     background-color : blue;
 }
 
+body {
+    background-color: rgb(46, 44, 44);
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 80% auto;
+}
+main {
+    grid-row: 2;
+    grid-column: 1;
+}
+a {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    grid-row: span;
+    position: absolute;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+}
+
+li{
+    margin: 20px;
+}
+
