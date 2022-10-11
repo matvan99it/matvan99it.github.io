@@ -1,6 +1,4 @@
-{
-    "origin": "./JS/",
-    "file": [
+[
         {
             "Name": "AngularJS", 
             "path": "AngularJS/"
@@ -42,4 +40,3 @@
             "path": "TESINA/"
         }
     ]
-}

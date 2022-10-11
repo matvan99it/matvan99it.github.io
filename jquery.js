@@ -1,9 +1,20 @@
 
-$(document).ready(function(){
-    $.getJSON("project_list.json", function(data){
-        console.log(data.origin); // Prints: Harry
-        console.log(data.file); // Prints: 14
-    }).fail(function(){
-        console.log("An error has occurred.");
-    });
+$.getJSON('./project_list.json', function(data) {
+    // JSON result in `data` variable
 });
+/*
+const jsù = $.ajax({
+    url:"./project_list.json",
+    type:'GET',
+    crossDomain: true,
+    dataType:'JSONP',
+    success: function(data){
+        console.log(data);
+        $('main').append( "Name: " + data );
+    },
+    fail: function(e){
+        console.log(e);
+    }
+});
+
+console.log(jsù);*/
