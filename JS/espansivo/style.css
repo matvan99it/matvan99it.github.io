@@ -1,0 +1,20 @@
+
+body{
+    background-color: rgb(20, 20, 20);
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+}
+
+#tiles{
+    height: 100vh;
+    width: 100vh;
+    display: grid;
+
+    grid-template-columns: repeat(var(--columns), 1fr);    /*Fraciotnal unit*/
+    grid-template-rows: repeat(var(--rows), 1fr);    /*Fraciotnal unit*/
+}
+
+.tile {
+    outline: 1px solid white;
+}
