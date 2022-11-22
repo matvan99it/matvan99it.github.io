@@ -1,7 +1,7 @@
 
-import anime from 'animejs/lib/anime.es.js';
+import anime from '/animejs/lib/anime.es.js';
 
-
+const anime = require('animejs');
 const colors = [
     "rgb(229, 57,  53)",
     "rgb(253, 216, 53)",
