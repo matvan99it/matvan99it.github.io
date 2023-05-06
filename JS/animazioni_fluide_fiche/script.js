@@ -10,8 +10,6 @@ const handleOnMove = e => {
     const percentage = (mouseDelta / maxDelta) * 100,
           nextPercentageUnconstrained = (parseFloat(track.dataset.prevPercentage) + percentage)*(-1),
           nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-    Math.min(nextPercentage, 0);
-    Math.max(nextPercentage, -100)
     track.dataset.percentage = nextPercentage;
 
     //track.style.transform = `translate(${nextPercentage}%, -50%)`;
