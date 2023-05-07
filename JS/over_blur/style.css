@@ -1,0 +1,47 @@
+:root{
+    --background-rgb: rgb(29, 30, 34);
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--background-rgb);
+  margin: 0rem;
+  overflow: hidden;
+}
+  
+#card{
+    width: 580px;
+    aspect-ratio: 2 / 3;
+    border: 1px solid rgb(255 255 255 / 15%);
+    color: aliceblue;
+    overflow: hidden;
+}
+
+#card > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#card > img:hover {
+    animation: pulse 800ms ease-in-out;
+    filter: url(#noise);
+}
+
+
+
+@keyframes pulse {
+    from, to{
+        scale: 1
+    }
+
+    50%{
+        scale: 1.08
+    }
+}

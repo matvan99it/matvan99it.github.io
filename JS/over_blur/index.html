@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="card">
+        <img src="https://plus.unsplash.com/premium_photo-1680127402006-3a21c93da392?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="" srcset="">
+    </div>
+
+    <svg style="display: none;">
+        <defs>
+            <filter id="noise">
+                <feTurbulence
+                    baseFrequency="0.7,0.8"
+                    seed="0"
+                    type="fractalNoise"
+                    result="static">
+
+                    <animate 
+                        attributeBane="seed"
+                        values="0;100"
+                        dur="800ms"
+                        repeatCount="1"
+                        begin="card.mouseenter"/>
+
+                </feTurbulence>
+
+
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                    <animate
+                        attributeName="scale"
+                        values="0;40;0"
+                        dur="800ms"
+                        repeatCount="1"
+                        begin="card.mouseenter"/>
+                </feDisplacementMap>
+            </filter>
+        </defs>
+    </svg>
+
+    
+
+</body>
+</html>

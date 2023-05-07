@@ -1,0 +1,13 @@
+<!--https://sean.brunnock.com/SVG/SVGTurbulanceGenerator-->
+<svg style="display: none;"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="noise">
+            <feTurbulence
+                baseFrequency="0.7,0.8"
+                seed="0"
+                type="fractalNoise"
+            />
+        </filter>
+    </defs>
+</svg>
