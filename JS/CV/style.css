@@ -31,6 +31,7 @@ aside {
     grid-column: 2;
     background: #333;
     padding: 1rem;
+    border-radius: 0px 0px 500px 500px;
 }
 
 #boom {
